@@ -131,7 +131,7 @@
             $scope.leftImage = $scope.pictures[0];
             $scope.rightImage = $scope.pictures[1];
             numPlayers = $scope.pictures.length;
-            numRounds = Math.ceil(Math.log2(numPlayers));
+            numRounds = Math.ceil(Math.log(numPlayers) / Math.log(2));
             roundsLeft = numRounds - 1;
             tournament = buildStructureForWinnerData(numPlayers);
         });
