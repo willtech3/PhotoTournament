@@ -1,0 +1,20 @@
+﻿<div class="row push-down make-grey" ng-repeat="item in dataz.results">
+    <div class="col-sm-3 text-center tex">
+        {{item.username}}
+    </div>
+    <div class="col-sm-3 text-center tex">
+        {{item.dateCreated}}
+    </div>
+    <div class="col-sm-6 frame pic-cell">
+        <img class="helper cat-pic" ng-src="{{item.catPictureUrl}}" alt="Alternate Text"/>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-4 col-sm-offset-4">
+        <ul class="pagination pagination-lg">
+            <li ng-repeat="i in getNumber(dataz.totalPages) track by $index">
+                <a ng-click="update($index)">{{$index}}</a>
+            </li>
+        </ul>
+    </div>
+</div>

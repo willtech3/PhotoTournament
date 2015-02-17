@@ -1,0 +1,21 @@
+﻿<div ng-controller="gameCtrl">
+    <div ng-hide="loading" style="margin-left: auto; margin-right: auto" class="row game-area push-down">
+        <div class="col-sm-6 frame pic-cell" id="left">
+            <img class="helper" ng-src="{{leftImage}}"/>
+        </div>
+        <div class="col-sm-6 frame pic-cell" id="right">
+            <img class="helper" ng-src="{{rightImage}}" alt="Alternate Text"/>
+        </div>
+        <div class="row push-down">
+            <div class="col-sm-6" id="vote-left">
+                <i ng-click="nextLeft()" class="glyphicon glyphicon-ok center-glyphicon"></i>
+            </div>
+            <div class="col-sm-6" id="vote-right">
+                <i ng-click="nextRight()" class="glyphicon glyphicon-ok center-glyphicon"></i>
+            </div>
+        </div>
+    </div>
+    <div  class="push-down frame pic-cell" ng-show="loading">
+        <img class="helper" src="/Content/loader.GIF"/>
+    </div>
+</div>
