@@ -105,5 +105,9 @@ img {
     user-select: none;
 }
 
+img.smallerloading {
+    background: transparent url('/Content/smallerloader.GIF') no-repeat scroll center center;
+}
+
 
 

@@ -1,10 +1,10 @@
 ﻿<div ng-controller="gameCtrl">
     <div ng-hide="loading" style="margin-left: auto; margin-right: auto" class="row game-area push-down">
         <div class="col-sm-6 frame pic-cell" id="left">
-            <img class="helper" ng-src="{{leftImage}}"/>
+            <img loader class="helper smallerloading" ng-src="{{leftImage}}" />
         </div>
         <div class="col-sm-6 frame pic-cell" id="right">
-            <img class="helper" ng-src="{{rightImage}}" alt="Alternate Text"/>
+            <img loader class="helper smallerloading" ng-src="{{rightImage}}" alt="Alternate Text" />
         </div>
         <div class="row push-down">
             <div class="col-sm-6" id="vote-left">

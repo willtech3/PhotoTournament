@@ -75,6 +75,7 @@
         var numPlayers = 0;
         var matchCounter = 1;
 
+
         var buildStructureForWinnerData = function() {
             var tournamentArray = [];
             for (var i = 0; i < numRounds; i++) {
@@ -136,11 +137,11 @@
             tournament = buildStructureForWinnerData(numPlayers);
         });
 
-        $scope.nextLeft = function() {
+        $scope.nextLeft = function () {
             nextMatch('left');
         };
 
-        $scope.nextRight = function() {
+        $scope.nextRight = function () {
             nextMatch('right');
         }
     }]);
@@ -214,6 +215,19 @@
             };
 
             return userService;
+    }]);
+
+
+    photoTournamentApp.directive('loader', function () {
+        return {
+            link: function (scope, element, attrs) {
+                element.bind("load", function (e) {
+                    //intercept to show spinners for images on original load event
+
+                    this.className = "helper";
+                });
+            }
         }
-    ]);
+    });
+
 }());
